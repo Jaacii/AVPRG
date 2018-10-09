@@ -8,6 +8,7 @@ var gainNode = context.createGain();
 document.body.addEventListener('mousemove', function(e){
 
     	if (mousedown) {
+            calculateFrequencyAndGain(e);
 
         }
 
@@ -16,6 +17,8 @@ document.body.addEventListener('mousemove', function(e){
 
     console.log(window.innerWidth);
     console.log(window.innerHeight);
+
+
 });
 
 oscillatorNode.connect(gainNode);
