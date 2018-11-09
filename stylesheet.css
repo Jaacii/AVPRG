@@ -12,6 +12,7 @@ body {
     padding: 15px 32px;
     text-decoration: none;
     display: inline-block;
+	background-color: Yellow ;
 	
 }
 
@@ -26,11 +27,12 @@ body {
 
 .Equalizer {
 	display:  inline-block;		/*positioniert sich nebeneinander wenn möglich */
-	
+	background-color: Blue ;
 }
 
 .room {
 	display:  inline-block;	
+	background-color: Green ;
 	position: fixed;
 	height: 100%;
 	width: 16%;	
