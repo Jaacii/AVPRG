@@ -23,7 +23,7 @@ body {
 	float: right;
 	width: 350px;
 	height: 260px;				/*höhe */
-	position: fixed;			/*absolute, static, fixed etc */
+			/*absolute, static, fixed etc */
 	display:  inline-block;		/*positioniert sich nebeneinander wenn möglich */
 	background-color: MediumVioletRed ;
 	text-align: center;
