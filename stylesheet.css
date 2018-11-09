@@ -20,10 +20,10 @@ body {
 	margin-right: 1em;
 	margin-left : 1em;
   border: 3px solid blue;
-	float: right;
+	float: left;
 	width: 350px;
 	height: 260px;				/*höhe */
-			/*absolute, static, fixed etc */
+			
 	display:  inline-block;		/*positioniert sich nebeneinander wenn möglich */
 	background-color: MediumVioletRed ;
 	text-align: center;
