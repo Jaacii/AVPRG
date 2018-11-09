@@ -17,6 +17,7 @@ body {
 }
 
 .Noisemaker {
+	float: right;
 	width: 350px;
 	height: 260px;				/*höhe */
 	position: fixed;			/*absolute, static, fixed etc */
