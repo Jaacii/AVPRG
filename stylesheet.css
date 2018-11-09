@@ -17,8 +17,8 @@ body {
 }
 
 .Noisemaker {
-	width: 16%;					/*breite */
-	height: 16%;				/*höhe */
+	width: 350px;
+	height: 260px;				/*höhe */
 	position: fixed;			/*absolute, static, fixed etc */
 	display:  inline-block;		/*positioniert sich nebeneinander wenn möglich */
 	background-color: MediumVioletRed ;
