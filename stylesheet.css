@@ -14,3 +14,24 @@ body {
     display: inline-block;
 	
 }
+
+.Noisemaker {
+	width: 16%;					/*breite */
+	height: 16%%;				/*höhe */
+	position: fixed;			/*absolute, static, fixed etc */
+	display:  inline-block;		/*positioniert sich nebeneinander wenn möglich */
+	background-color: MediumVioletRed ;
+	text-align: center;
+}
+
+.Equalizer {
+	
+	
+}
+
+.room {
+	display:  inline-block;	
+	position: fixed;
+	height: 100%;
+	width: 16%;	
+}

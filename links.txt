@@ -1,0 +1,17 @@
+Unsere Seite: https://jaacii.github.io/AVPRG_GruppeQ/
+
+
+
+
+3d audio
+https://www.html5rocks.com/en/tutorials/webaudio/positional_audio/
+
+https://github.com/jakobsudau/AVPRG
+
+
+resonance audio  google programm für 3d audio. 
+https://developers.google.com/resonance-audio/develop/web/getting-started
+https://www.youtube.com/watch?v=eWbaEr_mXRE
+
+
+Sounds free : http://soundbible.com/

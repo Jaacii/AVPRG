@@ -1,44 +1,70 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
     <head>
-            <link rel="stylesheet" type="text/css" href="stylesheet.css">
-        
-        <title>3D Audio Room</title>
-    </head>
+	<title>Visual-Soundilizer</title>
+	<link rel="stylesheet" type="text/css" href=stylesheet.css>
+	<meta charset= "utf-8">
+	
+	</head>
+	<!-- Page Elements	-->
+		<body>
+		<h1> Test </h1>
+		
+		<!-- Noisemaker	-->
+		 <div class="Noisemaker">
+		 
+		 </div>
+		
+		<!-- Room for 3D Audio	-->
+		<div class= "room">
+		<img src="volume.svg" id="sourceAIcon" hidden>  
+        <img src="person.svg" id="listenerIcon" hidden>
+		<canvas id="canvas"></canvas>
+		
+		<script src="audio3d.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/resonance-audio/build/resonance-audio.min.js"></script>		<!-- google resonance audio sdk	-->
+        <script src="canvasControl.js"></script>
+		 </div>
+		 
+		 <!-- Playbutton	-->
+		 <div class="button">
+		 
+		 </div>
+		 
 
-    <body>
-
-
-        <div id="mainContainer">
-            <!-- Dies ist der Code für die Aufgabe -->
-            <button id="playStopButton">Play</button>
-
-            <img src="volume.svg" id="sourceAIcon" hidden>
-            <img src="person.svg" id="listenerIcon" hidden>
-
-              <canvas id="canvas"></canvas> 
-
-           <!--   <div id="sliderContainer">
-                <input type="range" id="sourceHeightSlider" class="slider" min="0" max="100" value="0">
-            </div> 
-
-            <select id="roomSizeList" class="selectList">
-                <option id="small">small</option>
-                <option id="medium">medium</option>
-                <option id="large">large</option>
-                <option id="huge">huge</option>
-            </select>
-
-            <select id="roomMaterialList" class="selectList">
-                <option id="brick">brick</option>
-                <option id="curtains">curtains</option>
-                <option id="marble">marble</option>
-                <option id="outside">outside</option>
-            </select>-->
-
-            <script src="https://cdn.jsdelivr.net/npm/resonance-audio/build/resonance-audio.min.js"></script>
-            <script src="canvasControl.js"></script>
-            <script src="roomModel.js"></script>
-        </div>
-    </body>
+		 <!-- Equalizer	-->
+		 <div class="Equalizer">
+		 
+		 </div>
+		 
+	<!-- Skript	-->	 
+		 <script>
+		 
+		 
+		let audioContext = new AudioContext();
+		let resonanceAudioScene(audioContext);
+		resonanceAudioScene.output.connect (audioContext.destination);
+		
+		let audioElement = document.createElement('audio');
+		audioElement.src = 'Audiosamples/cat.wav';
+		audioElement.loop =true;
+		
+		let audioElementSource = audioContext.createMediaElementSource (audioElement);
+		
+		let source = resonanceAudioScene.createSource();
+		audioElementSource.connect(source.input);
+		source.setPosition(0,0,0);
+		source.setMaxDistance(3);
+		
+		 audioElement.play();
+		 
+		 
+		 resonanceAudioScene.setListenerPosition(0,0,0);
+		 
+		 </script>
+		 
+		 
+		</body>
+		
+		
 </html>
