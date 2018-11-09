@@ -1,0 +1,16 @@
+/*css*/
+
+body {
+	background-color: Lavender;
+	
+}
+
+.button {
+	background-image: url("Pictures/play.png") ;
+	background-repeat: no-repeat;
+    border: none;
+    padding: 15px 32px;
+    text-decoration: none;
+    display: inline-block;
+	
+}
