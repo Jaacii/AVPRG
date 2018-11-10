@@ -76,7 +76,7 @@ body {
 .room {
 	display:  inline-block;	
 	background-color: Green ;
-	
+	display:  inline-block;	
 	height: 100%;
 	width: 16%;	
 	float: both;
