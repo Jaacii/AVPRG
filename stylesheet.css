@@ -6,6 +6,11 @@ body {
 }
 
 .button {
+	float: both;
+	width: 80px;
+	height: 50px;	
+}
+.play {
 	background-image: url("Pictures/play.png") ;
 	background-repeat: no-repeat;
     border: none;
