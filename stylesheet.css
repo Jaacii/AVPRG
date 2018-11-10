@@ -7,10 +7,10 @@ body {
 
 .button {
 	float: both;
-	width: 80px;
-	height: 50px;
-	margin-left: 825px;  /*Die Anordnung zur Mitte geht auch anders und genauer. Sollte später noichmal geändert werden*/
-	margin-right: 825px;	
+	width: 120px;
+	height: 80px;
+	margin-left: 820px;  /*Die Anordnung zur Mitte geht auch anders und genauer. Sollte später noichmal geändert werden*/
+	margin-right: 820px;	
 	
 }
 .play {
