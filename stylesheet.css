@@ -11,31 +11,19 @@ body {
 	height: 80px;
 	margin-left: 820px;  /*Die Anordnung zur Mitte geht auch anders und genauer. Sollte später noichmal geändert werden*/
 	margin-right: 820px;	
-	font-size:16px;
-	
-}
-.play {
+	font-size:24px;
 	background-image: url("Pictures/play.png") ;
 	background-repeat: no-repeat;
-    border: none;
-    padding: 15px 32px;
-    text-decoration: none;
-    display: inline-block;
-	background-color: Yellow;
-	float: both;
-	width: 150px;
-	height: 120px;	
-	margin-left: 300px;
-	margin-right: 300px;
 }
+
 
 .Noisemaker {
 	margin-right: 10px;
 	margin-left : ;
 	border: 3px gray68;
 	float: left;
-	width: 350px;
-	height: 260px;				/*höhe */
+	width: 330px;
+	height: 230px;				/*höhe */
 			
 	display:  inline-block;		/*positioniert sich nebeneinander wenn möglich */
 	background-color: #501B1D;
