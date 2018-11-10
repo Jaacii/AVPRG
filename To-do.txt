@@ -9,3 +9,7 @@ HTML:
 Evtl textfeld nach den Slidern um den Slider auf eine bestimmte Position setzen zu lassen.
 Funktionen:
 Alles
+
+
+
+Evtl Umbearbeitung des 3D Rooms

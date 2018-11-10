@@ -80,5 +80,5 @@ body {
 	width: 16%;	
 	float: both;
 	margin-left: 730px;  /*Die Anordnung zur Mitte geht auch anders und genauer. Sollte später noichmal geändert werden*/
-	
+	margin-top: 10px;
 }
