@@ -75,10 +75,10 @@ body {
 
 .room {
 	display:  inline-block;	
-	background: #ADADAD;
+	background: #64485C;
 	height: 100%;
 	width: 16%;	
 	float: both;
-	margin-left: 790px;  /*Die Anordnung zur Mitte geht auch anders und genauer. Sollte später noichmal geändert werden*/
+	margin-left: 730px;  /*Die Anordnung zur Mitte geht auch anders und genauer. Sollte später noichmal geändert werden*/
 	
 }

@@ -6,6 +6,6 @@ Imagebutton
 
 HTML:
 3DRoom
-
+Evtl textfeld nach den Slidern um den Slider auf eine bestimmte Position setzen zu lassen.
 Funktionen:
 Alles
