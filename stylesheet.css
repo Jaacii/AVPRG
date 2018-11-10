@@ -41,6 +41,8 @@ body {
 	display:  inline-block;		/*positioniert sich nebeneinander wenn möglich */
 	background-color: Blue ;
 	float: both;
+	width: 90%;
+	height: 460px;
 }
 #panningContainer {
     background: #5b6f69;
