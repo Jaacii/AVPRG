@@ -9,8 +9,8 @@ body {
 	float: both;
 	width: 80px;
 	height: 50px;
-	margin-left: 700px;
-	margin-right: 700px;	
+	margin-left: 800px;  /*Die Anordnung zur Mitte geht auch anders und genauer. Sollte später noichmal geändert werden*/
+	margin-right: 800px;	
 }
 .play {
 	background-image: url("Pictures/play.png") ;
