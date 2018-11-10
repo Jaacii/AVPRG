@@ -1,7 +1,7 @@
 /*css*/
 
 body {
-	background-color: #501B1D;
+	background-color: #83677B;
 	
 }
 
@@ -34,7 +34,7 @@ body {
 	height: 260px;				/*höhe */
 			
 	display:  inline-block;		/*positioniert sich nebeneinander wenn möglich */
-	background-color: #83677B ;
+	background-color: #501B1D;
 	text-align: center;
 }
 
