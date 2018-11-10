@@ -5,18 +5,7 @@ body {
 	
 }
 
-.button {
-	float: both;
-	width: 120px;
-	height: 80px;
-	margin-left: 820px;  /*Die Anordnung zur Mitte geht auch anders und genauer. Sollte später noichmal geändert werden*/
-	margin-right: 820px;	
-	font-size:24px;
-	background-image: url("Pictures/play.png") ;
-	background-repeat: no-repeat;
-}
-
-
+/*Noisemaker*/
 .Noisemaker {
 	margin-right: 10px;
 	margin-left : ;
@@ -31,6 +20,35 @@ body {
 	
 }
 
+
+/*PlayButton*/
+.button {
+	float: both;
+	width: 120px;
+	height: 80px;
+	margin-left: 820px;  /*Die Anordnung zur Mitte geht auch anders und genauer. Sollte später noichmal geändert werden*/
+	margin-right: 820px;	
+	font-size:24px;
+	background-image: url("Pictures/play.png") ;
+	background-repeat: no-repeat;
+}
+
+
+
+/*3DAudio*/
+.room {
+	display:  inline-block;	
+	background: #64485C;
+	height: 100%;
+	width: 16%;	
+	float: both;
+	margin-left: 730px;  /*Die Anordnung zur Mitte geht auch anders und genauer. Sollte später noichmal geändert werden*/
+	margin-top: 10px;
+}
+
+
+
+/*Equalizer*/
 .Equalizer {
 	display:  inline-block;		/*positioniert sich nebeneinander wenn möglich */
 	/*background-color: Blue ;*/
@@ -39,7 +57,6 @@ body {
 	height: 460px;
 	text-align: center;
 }
-
 
 .slider {
 	text-align: center;
@@ -71,14 +88,4 @@ body {
     border-radius: 50%;
     background: #2E1114;
     cursor: pointer;
-}
-
-.room {
-	display:  inline-block;	
-	background: #64485C;
-	height: 100%;
-	width: 16%;	
-	float: both;
-	margin-left: 730px;  /*Die Anordnung zur Mitte geht auch anders und genauer. Sollte später noichmal geändert werden*/
-	margin-top: 10px;
 }
