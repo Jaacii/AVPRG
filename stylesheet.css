@@ -1,7 +1,7 @@
 /*css*/
 
 body {
-	background-color: 501B1D;
+	background-color: #501B1D;
 	
 }
 
@@ -27,7 +27,7 @@ body {
 .Noisemaker {
 	margin-right: 10px;
 	margin-left : ;
-  border: 3px solid blue;
+	border: 3px solid blue;
 	float: left;
 	width: 350px;
 	height: 260px;				/*höhe */
@@ -43,6 +43,7 @@ body {
 	float: both;
 	width: 90%;
 	height: 460px;
+	text-align: center;
 }
 #panningContainer {
     background: #5b6f69;
@@ -50,6 +51,7 @@ body {
 }
 
 .slider {
+	text-align: center;
     -webkit-appearance: none;
     width: 100%;
     height: 15px;
