@@ -11,8 +11,9 @@ body {
     border: none;
     padding: 15px 32px;
     text-decoration: none;
-   
-	background-color: Yellow ;
+    display: inline-block;
+	background-color: Yellow;
+	float: both;
 	
 }
 
@@ -30,14 +31,16 @@ body {
 }
 
 .Equalizer {
-	/*display:  inline-block;		/*positioniert sich nebeneinander wenn möglich */
+	display:  inline-block;		/*positioniert sich nebeneinander wenn möglich */
 	background-color: Blue ;
+	float: both;
 }
 
 .room {
-	/*display:  inline-block;*/	
+	display:  inline-block;	
 	background-color: Green ;
 	position: fixed;
 	height: 100%;
 	width: 16%;	
+	float: both;
 }
