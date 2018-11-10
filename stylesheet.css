@@ -27,7 +27,8 @@ body {
 	width: 120px;
 	height: 80px;
 	margin-left: 820px;  /*Die Anordnung zur Mitte geht auch anders und genauer. Sollte später noichmal geändert werden*/
-	margin-right: 820px;	
+	margin-right: 820px;
+	margin-top: 30px;	
 	font-size:24px;
 	background-image: url("Pictures/play.png") ;
 	background-repeat: no-repeat;
