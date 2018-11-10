@@ -42,6 +42,15 @@ body {
 	background-color: Blue ;
 	float: both;
 }
+#panningContainer {
+    background: #5b6f69;
+    width: 90%;
+}
+
+#sliderContainer {
+    background: #5b6f69;
+    width: 80%;
+}
 
 .room {
 	display:  inline-block;	
