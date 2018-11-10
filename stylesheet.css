@@ -28,7 +28,7 @@ body {
 .Noisemaker {
 	margin-right: 10px;
 	margin-left : ;
-	border: 3px solid blue;
+	border: 3px #ADADAD;
 	float: left;
 	width: 350px;
 	height: 260px;				/*höhe */
