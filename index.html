@@ -29,22 +29,22 @@
 		 
 		  <!-- Playbutton	-->
 		  </br></br></br></br> </br></br></br></br> </br></br></br></br> </br></br></br></br>   <!-- unschön muss noch geändert werden	-->
-		 <div class="play">
-		 <button id="playbtn" class="button"> </button>button
-		 </div>
+		 
+		 <button id="playbtn" class="button"> Play </button>
+		 
 		 
 		 <h1> Test </h1>
 		 
 		<!-- Room for 3D Audio		-->
-	<!-- 	 <div class= "room">
+		 <div class= "room">
 		<img src="volume.svg" id="sourceAIcon" hidden>  
         <img src="person.svg" id="listenerIcon" hidden>
 		<canvas id="canvas"></canvas>
 		
 		<script src="audio3d.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/resonance-audio/build/resonance-audio.min.js"></script>		<!-- google resonance audio sdk	-->
-      <!--   <script src="canvasControl.js"></script>
-		 </div>	-->
+        <script src="canvasControl.js"></script>
+		 </div>	
 		 
 		
 		 
@@ -52,6 +52,12 @@
 		 <!-- Equalizer	-->
 		 <div class="Equalizer">
 		 equaizer
+			<div id="sliderContainer">
+                <input type="range" id="sourceHeightSlider" class="slider" min="0" max="100" value="0">
+            </div>
+			<div id="sliderContainer">
+                <input type="range" id="sourceHeightSlider" class="slider" min="0" max="100" value="0">
+            </div>
 		 </div>
 		 
 	<!-- Skript	-->	 
