@@ -45,7 +45,9 @@
 	    <script>
         
 
- 
+   var laughX = 0.0;
+        var laughY = 0.0;
+        var laughZ = 0.0;
 
 
         var x = 0.0;
@@ -87,21 +89,26 @@
         // Add the room definition to the scene.
         resonanceAudioScene.setRoomProperties(roomDimensions, roomMaterials);
 
-        // Cat 
-        // AudioElement erstellen, Mediaelement erstellen. Mediaelement zur scene adden
+        /// -----------------  Laugh audio
+        // Create an AudioElement.
         let audioElement = document.createElement('audio');
-        audioElement.src = 'Audio/Cat.wav';
+
+        // Load an audio file into the AudioElement.
+        audioElement.src = 'Audio/rain.wav';
         audioElement.loop = true;
+        // Generate a MediaElementSource from the AudioElement.
         let audioElementSource = audioContext.createMediaElementSource(audioElement);
-        let source = resonanceAudioScene.createSource();	//zur Scene hinzufügen
+        // Add the MediaElementSource to the scene as an audio input source.
+        let source = resonanceAudioScene.createSource();
         audioElementSource.connect(source.input);
-        source.setPosition(0, 0, 0);		//Source Position
-        source.setMaxDistance(3);			//Ab welcher Entfernung zur Person ist der Sound nicht mehr hörbar
+        // Set the source position relative to the room center (source default position).
+        source.setPosition(laughX, laughY, laughZ);
+        source.setMaxDistance(3);
 
-        // Rain
-
+        /// -----------------  Waterfall
+        // Create an AudioElement.
         let audioElement2 = document.createElement('audio');
-        audioElement2.src = 'Audio/rain.wav';
+        audioElement2.src = 'Audio/Cat.wav';
         audioElement2.loop = true;
         let audioElementSource2 = audioContext.createMediaElementSource(audioElement2);
         let source2 = resonanceAudioScene.createSource();
@@ -110,7 +117,7 @@
         source2.setMaxDistance(3);
 
 
-        // Bird 
+        /// -----------------  Bird noises
         let audioElement3 = document.createElement('audio');
         audioElement3.src = 'Audio/bird.wav';
         audioElement3.loop = false;
@@ -122,7 +129,7 @@
 
         // Play the audio.
        // audioElement.play();
-        audioElement.play();
+        audioElement2.play();
 
      //   setInterval(()=>{
      //       //randomly position bird  -1 to +1 x/y relative to the listeners location every 4 seconds
