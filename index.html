@@ -45,9 +45,7 @@
 	    <script>
         
 
-   var laughX = 0.0;
-        var laughY = 0.0;
-        var laughZ = 0.0;
+ 
 
 
         var x = 0.0;
@@ -89,24 +87,19 @@
         // Add the room definition to the scene.
         resonanceAudioScene.setRoomProperties(roomDimensions, roomMaterials);
 
-        /// -----------------  Laugh audio
-        // Create an AudioElement.
+        /// Laugh audio
+        // AudioElement erstellen, Mediaelement erstellen. Mediaelement zur scene adden
         let audioElement = document.createElement('audio');
-
-        // Load an audio file into the AudioElement.
         audioElement.src = 'Audio/rain.wav';
         audioElement.loop = true;
-        // Generate a MediaElementSource from the AudioElement.
         let audioElementSource = audioContext.createMediaElementSource(audioElement);
-        // Add the MediaElementSource to the scene as an audio input source.
-        let source = resonanceAudioScene.createSource();
+        let source = resonanceAudioScene.createSource();	//zur Scene hinzufügen
         audioElementSource.connect(source.input);
-        // Set the source position relative to the room center (source default position).
-        source.setPosition(laughX, laughY, laughZ);
-        source.setMaxDistance(3);
+        source.setPosition(0, 0, 0);		//Source Position
+        source.setMaxDistance(3);			//Ab welcher Entfernung zur Person ist der Sound nicht mehr hörbar
 
-        /// -----------------  Waterfall
-        // Create an AudioElement.
+        /// Waterfall
+
         let audioElement2 = document.createElement('audio');
         audioElement2.src = 'Audio/Cat.wav';
         audioElement2.loop = true;
@@ -117,7 +110,7 @@
         source2.setMaxDistance(3);
 
 
-        /// -----------------  Bird noises
+        /// Bird 
         let audioElement3 = document.createElement('audio');
         audioElement3.src = 'Audio/bird.wav';
         audioElement3.loop = false;
