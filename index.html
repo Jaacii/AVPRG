@@ -5,6 +5,7 @@
 	<link rel="stylesheet" type="text/css" href=stylesheet.css>
 	<meta charset= "utf-8">
 	
+	<script src="jquery-1.10.2.min.js"></script> 
 	</head>
 	<!-- Page Elements	-->
 		<body>
@@ -31,7 +32,7 @@
 		 
 		 
 		  <!-- Playbutton	-->
-		 <button id="playbtn" onclick="playOrPauseSong()" class="button"> Play </button>
+		 <button id="playbtn" onclick="playOrPauseSong()" <img src="pause.png"/> class="button"> Play </button>
 		 
 		 
 		  <script type="text/javascript">
@@ -57,11 +58,11 @@
             
             if(song.paused){
                 song.play();
-               // $("#play img").attr("src","Pause.png");
+                $("#play img").attr("src","pause.png");
             }
             else{
                 song.pause();
-              //  $("#play img").attr("src","Play.png");
+                $("#play img").attr("src","play.png");
             }
 			
 			
