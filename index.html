@@ -7,40 +7,7 @@
 	
 	<script src="jquery-1.10.2.min.js"></script> 
 	 
-	 
-	
-		 
-	
-	</head>
-	<!-- Page Elements	-->
-		<body>
-		
-		<!-- Noisemaker	-->
-		<div>
-			<div>
-				<button class="Noisemaker"type="button">Pick noise</button> 
-			</div>
-		<!--  -->
-			<div>
-				<button class="Noisemaker" type="button">Pick noise</button> 
-			</div>
-		 <!--  -->
-			<div>
-				<button class="Noisemaker" type="button">Pick noise</button> 
-			</div>
-		 <!--  -->
-			<div>
-				<button class="Noisemaker" type="button">Add noise</button>  
-			</div>
-		 </div>
-		 
-		 
-		 
-		  <!-- Playbutton	-->
-		 <button id="playbtn" onclick="playOrPauseSong()"  class="button"> <img src="Pictures/pause.png"/> </button>
-		 
-		 
-		 
+	  <script src="https://cdn.jsdelivr.net/npm/resonance-audio/build/resonance-audio.min.js"></script>
 	 
 	    <script>
         
@@ -94,7 +61,7 @@
         let audioElement = document.createElement('audio');
 
         // Load an audio file into the AudioElement.
-        audioElement.src = 'Audio/rain.wav';
+        audioElement.src = 'laugh.wav';
         audioElement.loop = true;
         // Generate a MediaElementSource from the AudioElement.
         let audioElementSource = audioContext.createMediaElementSource(audioElement);
@@ -108,7 +75,7 @@
         /// -----------------  Waterfall
         // Create an AudioElement.
         let audioElement2 = document.createElement('audio');
-        audioElement2.src = 'Audio/Cat.wav';
+        audioElement2.src = 'Cat.wav';
         audioElement2.loop = true;
         let audioElementSource2 = audioContext.createMediaElementSource(audioElement2);
         let source2 = resonanceAudioScene.createSource();
@@ -119,7 +86,7 @@
 
         /// -----------------  Bird noises
         let audioElement3 = document.createElement('audio');
-        audioElement3.src = 'Audio/bird.wav';
+        audioElement3.src = 'bird.wav';
         audioElement3.loop = false;
         let audioElementSource3 = audioContext.createMediaElementSource(audioElement3);
         let source3 = resonanceAudioScene.createSource();
@@ -185,6 +152,39 @@
         }, this);
 
     </script>
+		 
+	
+	</head>
+	<!-- Page Elements	-->
+		<body>
+		
+		<!-- Noisemaker	-->
+		<div>
+			<div>
+				<button class="Noisemaker"type="button">Pick noise</button> 
+			</div>
+		<!--  -->
+			<div>
+				<button class="Noisemaker" type="button">Pick noise</button> 
+			</div>
+		 <!--  -->
+			<div>
+				<button class="Noisemaker" type="button">Pick noise</button> 
+			</div>
+		 <!--  -->
+			<div>
+				<button class="Noisemaker" type="button">Add noise</button>  
+			</div>
+		 </div>
+		 
+		 
+		 
+		  <!-- Playbutton	-->
+		 <button id="playbtn" onclick="playOrPauseSong()"  class="button"> <img src="Pictures/pause.png"/> </button>
+		 
+		 
+		 
+	
 
 
 		 
