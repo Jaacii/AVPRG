@@ -37,16 +37,18 @@
 		  <!-- Playbutton	-->
 		 <button id="playbtn" onclick="playOrPauseSong()"  class="button"> <img src="Pictures/pause.png"/> </button>
 		 
+		 <script src="https://cdn.jsdelivr.net/npm/resonance-audio/build/resonance-audio.min.js"></script>
 		 
+	
 
     <script>
-   
+        
+
+
         var x = 0.0;
         var y = 0.0;
         var z = 0.0;
 
-		
-		
         // Create an AudioContext
         let audioContext = new AudioContext();
 
@@ -82,15 +84,15 @@
         // Add the room definition to the scene.
         resonanceAudioScene.setRoomProperties(roomDimensions, roomMaterials);
 
-        /// -----------------  Rain audio
+        /// -----------------  Laugh audio
         // Create an AudioElement.
-        let audioFile1 = document.createElement('audio');
+        let audioElement = document.createElement('audio');
 
         // Load an audio file into the AudioElement.
-        audioFile1.src = 'rain.wav';
-        audioFile1.loop = true;
+        audioElement.src = 'laugh.wav';
+        audioElement.loop = true;
         // Generate a MediaElementSource from the AudioElement.
-        let audioElementSource = audioContext.createMediaElementSource(audioFile1);
+        let audioElementSource = audioContext.createMediaElementSource(audioElement);
         // Add the MediaElementSource to the scene as an audio input source.
         let source = resonanceAudioScene.createSource();
         audioElementSource.connect(source.input);
@@ -98,31 +100,31 @@
         source.setPosition(0, 0, 0);
         source.setMaxDistance(3);
 
-        /// -----------------  Cat
+        /// -----------------  Waterfall
         // Create an AudioElement.
-        let audioFile2 = document.createElement('audio');
-        audioFile2.src = 'Audio/Cat.wav';
-        audioFile2.loop = true;
-        let audioElementSource2 = audioContext.createMediaElementSource(audioFile2);
+        let audioElement2 = document.createElement('audio');
+        audioElement2.src = 'Cat.wav';
+        audioElement2.loop = true;
+        let audioElementSource2 = audioContext.createMediaElementSource(audioElement2);
         let source2 = resonanceAudioScene.createSource();
         audioElementSource2.connect(source2.input);
         source2.setPosition(0,0,0);
         source2.setMaxDistance(3);
 
 
-        /// -----------------  Bird 
-        let audioFile3 = document.createElement('audio');
-        audioFile3.src = 'bird.wav';
-        audioFile3.loop = false;
-        let audioElementSource3 = audioContext.createMediaElementSource(audioFile3);
+        /// -----------------  Bird noises
+        let audioElement3 = document.createElement('audio');
+        audioElement3.src = 'bird.wav';
+        audioElement3.loop = false;
+        let audioElementSource3 = audioContext.createMediaElementSource(audioElement3);
         let source3 = resonanceAudioScene.createSource();
         audioElementSource3.connect(source3.input);
-        source3.setPosition(0,0,0);
+        source3.setPosition(0.5,0,1);
         source3.setMaxDistance(3);
 
         // Play the audio.
-       // audioFile1.play();
-        audioFile2.play();
+       // audioElement.play();
+        audioElement2.play();
 
      //   setInterval(()=>{
      //       //randomly position bird  -1 to +1 x/y relative to the listeners location every 4 seconds
