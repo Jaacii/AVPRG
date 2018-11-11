@@ -24,8 +24,8 @@ body {
 /*PlayButton*/
 .button {
 	float: both;
-	width: 120px;
-	height: 80px;
+	width: 180px;
+	height: 180px;
 	margin-left: 820px;  /*Die Anordnung zur Mitte geht auch anders und genauer. Sollte später noichmal geändert werden*/
 	margin-right: 820px;
 	margin-top: 30px;	
