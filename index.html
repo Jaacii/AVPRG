@@ -34,9 +34,64 @@
 		  <!-- Playbutton	-->
 		 <button id="playbtn" onclick="playOrPauseSong()"  class="button"> <img src="Pictures/pause.png"/> </button>
 		 
+		 <script src="https://cdn.jsdelivr.net/npm/resonance-audio/build/resonance-audio.min.js"></script>
 		 
 		  <script type="text/javascript">
-		var currentSong = 0; 
+	
+			 var laughX = 0.0;
+			var laughY = 0.0;
+			var laughZ = 0.0;
+			var x = 0.0;
+			var y = 0.0;
+			var z = 0.0;
+
+
+			// Create an AudioContext
+			let audioContext = new AudioContext();
+			// Create a (first-order Ambisonic) Resonance Audio scene and pass it
+			// the AudioContext.
+			let resonanceAudioScene = new ResonanceAudio(audioContext);
+			// Connect the scene’s binaural output to stereo out.
+			resonanceAudioScene.output.connect(audioContext.destination);
+			
+			let roomDimensions = {
+            width: 3.1,
+            height: 2.5,
+            depth: 3.4,
+        };
+		
+			 let roomMaterials = {
+            // Room wall materials
+            left: 'metal',
+            right: 'curtain-heavy',
+            front: 'curtain-heavy',
+            back: 'curtain-heavy',
+            // Room floor
+            down: 'grass',
+            // Room ceiling
+            up: 'grass',
+        };
+        // Add the room definition to the scene.
+        resonanceAudioScene.setRoomProperties(roomDimensions, roomMaterials);
+		
+		 /// -----------------  cAT audio
+        // Create an AudioElement.
+        let audioElement = document.createElement('audio');
+        // Load an audio file into the AudioElement.
+        audioElement.src = 'Cat.wav';
+        audioElement.loop = true;
+        // Generate a MediaElementSource from the AudioElement.
+        let audioElementSource = audioContext.createMediaElementSource(audioElement);
+        // Add the MediaElementSource to the scene as an audio input source.
+        let source = resonanceAudioScene.createSource();
+        audioElementSource.connect(source.input);
+        // Set the source position relative to the room center (source default position).
+        source.setPosition(laughX, laughY, laughZ);
+        source.setMaxDistance(3);
+
+		 audioElement2.play();
+
+	/*var currentSong = 0; 
 		var songs = ["Audiosamples/Cat.wav","Audiosamples/bird.wav","Audiosamples/rain.wav"];
 		  
 		var song = new Audio();
@@ -55,7 +110,7 @@
           //  song.play();    // play the song
         }
 		  */
-		 function playOrPauseSong(){
+	/*	 function playOrPauseSong(){
             
             if(song.paused){
                 song.play();
@@ -70,7 +125,7 @@
         });
 		
 		
-          
+          */
 		  
 		   </script>
 		 
@@ -83,7 +138,7 @@
 				<canvas id="canvas"></canvas>
 		
 				<script src="audio3d.js"></script>
-				<script src="https://cdn.jsdelivr.net/npm/resonance-audio/build/resonance-audio.min.js"></script>		<!-- google resonance audio sdk	-->
+						<!-- google resonance audio sdk	-->
 				<script src="canvasControl.js"></script>
 		 </div>	
 		 
@@ -122,7 +177,7 @@
 	<!-- Skript	 Versuch, funktioniert noch nicht-->	 
 		 <script>
 		 
-		 
+	/*	 
 		let audioContext = new AudioContext();
 		let resonanceAudioScene(audioContext);
 		resonanceAudioScene.output.connect (audioContext.destination);
@@ -142,7 +197,7 @@
 		 
 		 
 		 resonanceAudioScene.setListenerPosition(0,0,0);
-		 
+		 */
 		 </script>
 		 
 		 
