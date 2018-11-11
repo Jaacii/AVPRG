@@ -44,6 +44,10 @@
     <script>
         
 
+   var laughX = 0.0;
+        var laughY = 0.0;
+        var laughZ = 0.0;
+
 
         var x = 0.0;
         var y = 0.0;
@@ -97,13 +101,13 @@
         let source = resonanceAudioScene.createSource();
         audioElementSource.connect(source.input);
         // Set the source position relative to the room center (source default position).
-        source.setPosition(0, 0, 0);
+        source.setPosition(laughX, laughY, laughZ);
         source.setMaxDistance(3);
 
         /// -----------------  Waterfall
         // Create an AudioElement.
         let audioElement2 = document.createElement('audio');
-        audioElement2.src = 'Audio/Cat.wav';
+        audioElement2.src = 'Cat.wav';
         audioElement2.loop = true;
         let audioElementSource2 = audioContext.createMediaElementSource(audioElement2);
         let source2 = resonanceAudioScene.createSource();
