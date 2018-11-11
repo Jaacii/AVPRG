@@ -31,7 +31,47 @@
 		 
 		 
 		  <!-- Playbutton	-->
-		 <button id="playbtn" class="button"> Play </button>
+		 <button id="playbtn" onclick="playOrPauseSong()" class="button"> Play </button>
+		 
+		 
+		  <script type="text/javascript">
+		var currentSong = 0; 
+		var songs = ["Cat.wav","bird.wav","rain.wav"];
+		  
+		var song = new Audio();
+		
+		
+		
+		window.onload = playSong;  //auto laden des ersten songs. später entfernen
+		
+		        function playSong(){
+            
+            song.src = songs[currentSong];  //set the source of 0th song 
+            
+          
+            
+            song.play();    // play the song
+        }
+		  
+		 function playOrPauseSong(){
+            
+            if(song.paused){
+                song.play();
+               // $("#play img").attr("src","Pause.png");
+            }
+            else{
+                song.pause();
+              //  $("#play img").attr("src","Play.png");
+            }
+			
+			
+        });
+		
+		
+          
+		  
+		   </script>
+		 
 		 
 		 
 		 <!-- Room for 3D Audio		-->
