@@ -56,24 +56,18 @@
         // Add the room definition to the scene.
         resonanceAudioScene.setRoomProperties(roomDimensions, roomMaterials);
 
-        /// -----------------  Laugh audio
-        // Create an AudioElement.
+        // Rain
+        //Create AudioElement, create MediaElement, fügt MediaElement zur Scene hinzu
         let audioElement = document.createElement('audio');
-
-        // Load an audio file into the AudioElement.
-        audioElement.src = 'Audio/rain.wav';
+		audioElement.src = 'Audio/rain.wav';
         audioElement.loop = true;
-        // Generate a MediaElementSource from the AudioElement.
         let audioElementSource = audioContext.createMediaElementSource(audioElement);
-        // Add the MediaElementSource to the scene as an audio input source.
         let source = resonanceAudioScene.createSource();
         audioElementSource.connect(source.input);
-        // Set the source position relative to the room center (source default position).
-        source.setPosition(laughX, laughY, laughZ);
-        source.setMaxDistance(3);
+        source.setPosition(laughX, laughY, laughZ);  	//Source position
+        source.setMaxDistance(3);						//Distanz ab welcher der Sound unhörbar wird
 
-        /// -----------------  Waterfall
-        // Create an AudioElement.
+        // Rain
         let audioElement2 = document.createElement('audio');
         audioElement2.src = 'Audio/Cat.wav';
         audioElement2.loop = true;
@@ -84,7 +78,7 @@
         source2.setMaxDistance(3);
 
 
-        /// -----------------  Bird noises
+        // Bird 
         let audioElement3 = document.createElement('audio');
         audioElement3.src = 'Audio/bird.wav';
         audioElement3.loop = false;
@@ -94,8 +88,7 @@
         source3.setPosition(0.5,0,1);
         source3.setMaxDistance(3);
 
-        // Play the audio.
-       // audioElement.play();
+        
         audioElement2.play();
 
      //   setInterval(()=>{
