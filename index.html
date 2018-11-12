@@ -87,19 +87,21 @@
 	   //------------Play Button
 		
 		
+					var onOff = 0;
+		
 			function playOrPauseSong() {
-				audioElement2.play();
-			
-/*			 Proboleme mit der Variable. Muss andere Lösung finden
-				if (onOff = 0) {
-				 audioElement2.pause();
+				
+				
+				if (onOff == 0) {
+				 audioElement2.play();
 				 onOff = 1;
 				}
 				else {
-				audioElement2.play();
-				var onOff = 0;
-				}*/
+				audioElement2.pause();
+				onOff = 0;
+				}
 			}
+
    
    
    
