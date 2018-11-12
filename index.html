@@ -5,9 +5,89 @@
 	<link rel="stylesheet" type="text/css" href=stylesheet.css>
 	<meta charset= "utf-8">
 	
-	<!-- <script src="jquery-1.10.2.min.js"></script> -->
+	<!-- Evtl ist die doppelte resonance implimierung unnötig -->
 	 
-	  
+	      <script src="https://cdn.jsdelivr.net/npm/resonance-audio/build/resonance-audio.min.js"></script>
+
+    <script>
+       
+
+
+        var x = 0.0;
+        var y = 0.0;
+        var z = 0.0;
+
+       
+        let audioContext = new AudioContext();
+
+        // first-order Ambisonic Resonance Audio scene 
+        let resonanceAudioScene = new ResonanceAudio(audioContext);
+
+        // Connect the scene’s binaural output to stereo out.
+        resonanceAudioScene.output.connect(audioContext.destination);
+
+		//Raum Größe und Material
+        let roomDimensions = {
+            width: 3.1,
+            height: 2.5,
+            depth: 3.4,
+        };
+
+       
+			let roomMaterials = {
+            
+            left: 'metal',
+            right: 'curtain-heavy',
+            front: 'curtain-heavy',
+            back: 'curtain-heavy',
+            // Room floor
+            down: 'grass',
+            // Room ceiling
+            up: 'grass',
+        };
+
+        
+        resonanceAudioScene.setRoomProperties(roomDimensions, roomMaterials);
+
+		
+        //Cat     
+        let audioElement = document.createElement('audio');
+        audioElement.src = 'Cat.wav';
+        audioElement.loop = true;
+        let audioElementSource = audioContext.createMediaElementSource(audioElement);
+        let source = resonanceAudioScene.createSource();
+        audioElementSource.connect(source.input);
+        source.setPosition(x,y,z);
+        
+
+        //  Bird		Funktioniert
+        let audioElement2 = document.createElement('audio');
+        audioElement2.src = 'bird.wav';
+        audioElement2.loop = true;
+        let audioElementSource2 = audioContext.createMediaElementSource(audioElement2);
+        let source2 = resonanceAudioScene.createSource();
+        audioElementSource2.connect(source2.input);
+        source2.setPosition(x,y,z);
+        
+
+
+        // Rain 					Funktioniert nicht?
+        let audioElement3 = document.createElement('audio');
+        audioElement3.src = 'rain.wav';
+        audioElement3.loop = true;
+        let audioElementSource3 = audioContext.createMediaElementSource(audioElement3);
+        let source3 = resonanceAudioScene.createSource();
+        audioElementSource3.connect(source3.input);
+        source3.setPosition(x,y,z);
+        
+
+     
+        audioElement2.play();
+
+   
+        
+
+    </script>
 	 
 	   
 		 
@@ -46,47 +126,7 @@
 
 
 		 
-		  <script type="text/javascript">
-	
-			
 
-	/*var currentSong = 0; 
-		var songs = ["Audiosamples/Cat.wav","Audiosamples/bird.wav","Audiosamples/rain.wav"];
-		  
-		var song = new Audio();
-		
-		var song2 = new Audio(Audiosamples/Test.mp3);
-		song2.play();
-		/*
-		window.onload = playSong;  //auto laden des ersten songs. später entfernen
-		
-		        function playSong(){
-            
-            song.src = songs[currentSong];  //set the source of 0th song 
-            
-          
-            
-          //  song.play();    // play the song
-        }
-		  */
-	/*	 function playOrPauseSong(){
-            
-            if(song.paused){
-                song.play();
-                $("#play img").attr("src","Pictures/pause.png");
-            }
-            else{
-                song.pause();
-                $("#play img").attr("src","Pictures/play.png");
-            }
-			
-			
-        });
-		
-		
-          */
-		  
-		   </script>
 		 
 		 
 		 
@@ -132,109 +172,11 @@
                 <input type="range" id="sourceHeightSlider" class="slider" min="0" max="100" value="0">
             </div>
 		 </div>
-				<script src="https://cdn.jsdelivr.net/npm/resonance-audio/build/resonance-audio.min.js"></script>
-				<script src="node_modules/resonance-audio/build/resonance-audio.min.js"></script>
-			<script>
-				
-				var x, v, z; 
-				x = 0;
-				v = 0
-				z = 0;
-				
-				
-				let audioContext = new AudioContext();
-
-				// first-order Ambisonic Resonance Audio scene verbunden mit AudioContext
-				let resonanceAudioScene = new ResonanceAudio(audioContext);
-
-				resonanceAudioScene.output.connect(audioContext.destination);
-				
-				
-				let roomDimensions = {		//Raumgröße
-				width: 3.1,
-				height: 2.5,
-				depth: 3.4,
-				};
-				
-				let roomMaterials = {		//Raummaterials
-				left: 'brick-bare',
-				right: 'curtain-heavy',
-				front: 'marble',
-				back: 'glass-thin',
-				down: 'grass',
-				up: 'transparent',
-				};
-				
-				resonanceAudioScene.setRoomProperties(roomDimensions, roomMaterials);
-
-				// Cat
-				let audioElement = document.createElement('audio');
-				audioElement.src = 'Cat.wav';
-				audioElement.loop = true;
-				let audioElementSource = audioContext.createMediaElementSource(audioElement);
-				let source = resonanceAudioScene.createSource();
-				audioElementSource.connect(source.input);
-				source.setPosition(-0.707, -0.707, 0);
-				
-				
-				//source.setMaxDistance(5);
-				
-				audioElement.play();
-
-
-
-				
-				
-				// Create a Resonance Audio Source object with properties.
-				let source = resonanceAudio.createSource({
-				});
-
-				// Connect an input to the source.
-				audioElementSource.connect(source.input);
-
-				// Connect Resonance Audio’s output to audio output.
-				resonanceAudio.output.connect(audioContext.destination);
-
-				// Set the source and listener positions.
-				source.setPosition(x, v, z);
-				resonanceAudio.setListenerPosition(x, v, z);
-
-
-  
-			</script>
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-	<!-- Skript	 Versuch, funktioniert noch nicht-->	 
-		 <script>
-		 
-	/*	 
-		let audioContext = new AudioContext();
-		let resonanceAudioScene(audioContext);
-		resonanceAudioScene.output.connect (audioContext.destination);
+			
 		
-		let audioElement = document.createElement('audio');
-		audioElement.src = 'Audiosamples/cat.wav';
-		audioElement.loop =true;
-		
-		let audioElementSource = audioContext.createMediaElementSource (audioElement);
-		
-		let source = resonanceAudioScene.createSource();
-		audioElementSource.connect(source.input);
-		source.setPosition(0,0,0);
-		source.setMaxDistance(3);
-		
-		 audioElement.play();
 		 
-		 
-		 resonanceAudioScene.setListenerPosition(0,0,0);
-		 */
-		 </script>
+
+
 		 
 		 
 		</body>
