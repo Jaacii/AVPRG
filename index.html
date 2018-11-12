@@ -136,10 +136,10 @@
 				<script src="node_modules/resonance-audio/build/resonance-audio.min.js"></script>
 			<script>
 				
-
-				var x = 0;
-				var y = 0;
-				var z = 0;
+				var x, v, z; 
+				x = 0;
+				v = 0
+				z = 0;
 				
 				
 				let audioContext = new AudioContext();
@@ -169,7 +169,7 @@
 
 				// Cat
 				let audioElement = document.createElement('audio');
-				audioElement.src = 'Audio/Cat.wav';
+				audioElement.src = 'Cat.wav';
 				audioElement.loop = true;
 				let audioElementSource = audioContext.createMediaElementSource(audioElement);
 				let source = resonanceAudioScene.createSource();
@@ -196,8 +196,8 @@
 				resonanceAudio.output.connect(audioContext.destination);
 
 				// Set the source and listener positions.
-				source.setPosition(x, y, z);
-				resonanceAudio.setListenerPosition(x, y, z);
+				source.setPosition(x, v, z);
+				resonanceAudio.setListenerPosition(x, v, z);
 
 
   
