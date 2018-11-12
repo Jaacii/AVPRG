@@ -82,8 +82,26 @@
         
 
      
-        audioElement2.play();
+        //audioElement2.play();
 
+	   //------------Play Button
+		
+		
+			function playOrPauseSong() {
+				audioElement2.play();
+			
+/*			 Proboleme mit der Variable. Muss andere Lösung finden
+				if (onOff = 0) {
+				 audioElement2.pause();
+				 onOff = 1;
+				}
+				else {
+				audioElement2.play();
+				var onOff = 0;
+				}*/
+			}
+   
+   
    
         
 
@@ -118,7 +136,7 @@
 		 
 		 
 		  <!-- Playbutton	-->
-		 <button id="playbtn" onclick="playOrPauseSong()"  class="button"> <img src="Pictures/pause.png"/> </button>
+		 <input id="playbtn" type="button" onclick="playOrPauseSong()"  class="button"> <img src="Pictures/pause.png"/> </button>
 		 
 		 
 		 
