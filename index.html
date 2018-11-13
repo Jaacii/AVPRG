@@ -82,28 +82,50 @@
         
 
      
-        //audioElement2.play();
+     //------------Audio Select
+		var select = 2;
+	 
+			function selectSong(value) {		//funktioniert noch nicht
+				
+					select = value;
 
-	   //------------Play Button
-		
-		
-					var onOff = 0;
+				
+			}
+   
+   //------------Play Button
+		var onOff = 0;
 		
 			function playOrPauseSong() {
 				
 				
 				if (onOff == 0) {
-				 audioElement2.play();
-				 document.getElementById("playpic").src="Pictures/play.png";
+					if (select == 0) {		//Unschön. Evtl kann man es mit nem Array kürzen
+					audioElement.play();
+					}
+					else if (select == 1){
+					audioElement1.play();
+					}
+					else {					// select == 2
+					audioElement2.play(); 
+				 }
+				 //Pic change
+				 document.getElementById("playpic").src="Picture/pause.png";
 				 onOff = 1;
 				}
 				else {
-				audioElement2.pause();
-				document.getElementById("playpic").src="Pictures/pause.png";
+					if (select == 0) {
+					audioElement.pause();     
+					} else if (select == 1){
+					audioElement1.pause();    
+					} else {
+					audioElement2.pause();     
+					}
+				  
+				//Pic change
+				document.getElementById("playpic").src="Picture/play.png";
 				onOff = 0;
 				}
 			}
-
    
    
    
@@ -120,27 +142,21 @@
 		
 		<!-- Noisemaker	-->
 		<div>
-			<div>
-				<button class="Noisemaker"type="button">Pick noise</button> 
-			</div>
-		<!--  -->
-			<div>
-				<button class="Noisemaker" type="button">Pick noise</button> 
-			</div>
-		 <!--  -->
-			<div>
-				<button class="Noisemaker" type="button">Pick noise</button> 
-			</div>
-		 <!--  -->
-			<div>
-				<button class="Noisemaker" type="button">Add noise</button>  
-			</div>
+		<div>
+				<input class="Noisemaker" id="s0" value ="0"onclick="selectSong(this.value))" type="button">Pick noise</button> 
+		</div>
+		 <div>
+				<input class="Noisemaker" id="s1" value= "1" onclick="selectSong(this.value))" type="button">Pick noise</button> 
+		</div>
+		<div>
+				<input class="Noisemaker" id="s2" value= "2" onclick="selectSong(this.value)" type="button">Pick noise</button> 
+		</div>
 		 </div>
 		 
 		 
 		 
 		  <!-- Playbutton	-->
-		 <input id="playbtn" type="button" onclick="playOrPauseSong()"  class="button"> <img src="Pictures/pause.png"/> </button>
+		 <input id="playbtn" type="button" onclick="playOrPauseSong()"  class="button"> <img id="playpic" src="Picture/play.png"/> </input> 
 		 
 		 
 		 
