@@ -1,3 +1,4 @@
 rain: http://soundbible.com/2217-Heavy-Rain-Wind.html
-cat: http://soundbible.com/2217-Heavy-Rain-Wind.html
+cat: 
 bird: http://soundbible.com/2180-Meadowlark.html
+wind : http://soundbible.com/1247-Wind.html

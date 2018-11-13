@@ -50,19 +50,12 @@
         resonanceAudioScene.setRoomProperties(roomDimensions, roomMaterials);
 
 		
-        //Cat     
-        let audioElement = document.createElement('audio');
-        audioElement.src = 'Cat.wav';
-        audioElement.loop = true;
-        let audioElementSource = audioContext.createMediaElementSource(audioElement);
-        let source = resonanceAudioScene.createSource();
-        audioElementSource.connect(source.input);
-        source.setPosition(x,y,z);
         
-
-        //  Bird		Funktioniert
+		//
+		var songs = ["Cat.wav","bird.wav","wind.wav"];
+ 
         let audioElement2 = document.createElement('audio');
-        audioElement2.src = 'bird.wav';
+		
         audioElement2.loop = true;
         let audioElementSource2 = audioContext.createMediaElementSource(audioElement2);
         let source2 = resonanceAudioScene.createSource();
@@ -71,23 +64,17 @@
         
 
 
-        // Rain 					Funktioniert nicht?
-        let audioElement3 = document.createElement('audio');
-        audioElement3.src = 'rain.wav';
-        audioElement3.loop = true;
-        let audioElementSource3 = audioContext.createMediaElementSource(audioElement3);
-        let source3 = resonanceAudioScene.createSource();
-        audioElementSource3.connect(source3.input);
-        source3.setPosition(x,y,z);
-        
-
      
-     //------------Audio Select
-		var select = 2;
+	  //------------Audio Select
+		
 	 
-			function selectSong(value) {		//funktioniert noch nicht
-				
-					select = value;
+			function selectSong(value) {		
+					if (value == 0) {
+					select = 0;}
+					else if (value == 1) {
+					select = 1;}
+					else {
+					select = 2;}
 
 				
 			}
@@ -98,36 +85,25 @@
 			function playOrPauseSong() {
 				
 				
+				
 				if (onOff == 0) {
-					if (select == 0) {		//Unschön. Evtl kann man es mit nem Array kürzen
-					audioElement.play();
-					}
-					else if (select == 1){
-					audioElement1.play();
-					}
-					else {					// select == 2
-					audioElement2.play(); 
-				 }
-				 //Pic change
-				 document.getElementById("playpic").src="Pictures/pause.png";
-				 onOff = 1;
+					audioElement2.src = songs[select];
+				
+					audioElement2.play();
+				
+					//Pic change
+					document.getElementById("playpic").src="Pictures/pause.png";
+					onOff = 1;
 				}
 				else {
-					if (select == 0) {
-					audioElement.pause();     
-					} else if (select == 1){
-					audioElement1.pause();    
-					} else {
-					audioElement2.pause();     
-					}
-				  
-				//Pic change
-				document.getElementById("playpic").src="Pictures/play.png";
-				onOff = 0;
+					
+					audioElement2.pause();     			  
+					//Pic change
+					document.getElementById("playpic").src="Pictures/play.png";
+					onOff = 0;
 				}
 			}
-   
-   
+
    
         
 
