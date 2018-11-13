@@ -94,10 +94,12 @@
 				
 				if (onOff == 0) {
 				 audioElement2.play();
+				 document.getElementById("playpic").src="Pictures/play.png";
 				 onOff = 1;
 				}
 				else {
 				audioElement2.pause();
+				document.getElementById("playpic").src="Pictures/pause.png";
 				onOff = 0;
 				}
 			}
