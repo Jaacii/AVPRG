@@ -106,15 +106,7 @@
 			}
 
 			
-			// Volume Slider
-			
-			volumeslider = document.getElementById("volumeslider");
-			volumeslider.addEventListener("mousemove", setvolume);
-			
-			function setvolume(){
-			audioElement2.volume = volumeslider.value / 100;
-			}
-			
+		
 
     </script>
 	 
@@ -202,7 +194,19 @@
             </div>
 		 </div>
 			
+		<script>
 		
+			// Volume Slider
+			
+			volumeslider = document.getElementById("volumeslider");
+			volumeslider.addEventListener("mousemove", setvolume);
+			
+			function setvolume(){
+			audioElement2.volume = volumeslider.value / 100;
+			}
+			
+		
+		</script>
 		 
 
 
