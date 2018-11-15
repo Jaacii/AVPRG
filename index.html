@@ -10,8 +10,10 @@
 	      <script src="https://cdn.jsdelivr.net/npm/resonance-audio/build/resonance-audio.min.js"></script>
 
     <script>
-       
-
+						//Später Script in einzelne Dateien packen. Single responsibility prinzip
+	   var select = 1;
+	   
+		//---------- Resonance Audio
 
         var x = 0.0;
         var y = 0.0;
@@ -48,9 +50,8 @@
 
         
         resonanceAudioScene.setRoomProperties(roomDimensions, roomMaterials);
-
 		
-        
+		
 		//
 		var songs = ["Cat.wav","bird.wav","wind.wav"];
  
@@ -64,7 +65,7 @@
         
 
 
-     
+
 	  //------------Audio Select
 		
 	 
@@ -92,20 +93,18 @@
 					audioElement2.play();
 				
 					//Pic change
-					document.getElementById("playpic").src="Pictures/pause.png";
+					document.getElementById("playpic").src="pause.png";
 					onOff = 1;
 				}
 				else {
 					
 					audioElement2.pause();     			  
 					//Pic change
-					document.getElementById("playpic").src="Pictures/play.png";
+					document.getElementById("playpic").src="play.png";
 					onOff = 0;
 				}
 			}
 
-   
-        
 
     </script>
 	 
@@ -119,13 +118,13 @@
 		<!-- Noisemaker	-->
 		<div>
 		<div>
-				<input class="Noisemaker" id="s0" onclick="selectSong(0)" type="button">Pick noise</button> 
+				<input class="Noisemaker" id="s0" onclick="selectSong(0)" type="button"></button> 
 		</div>
 		 <div>
-				<input class="Noisemaker" id="s1"  onclick="selectSong(1)" type="button">Pick noise</button> 
+				<input class="Noisemaker" id="s1"  onclick="selectSong(1)" type="button"></button> 
 		</div>
 		<div>
-				<input class="Noisemaker" id="s2" onclick="selectSong(2)" type="button">Pick noise</button> 
+				<input class="Noisemaker" id="s2" onclick="selectSong(2)" type="button"></button> 
 		</div>
 		 </div>
 		 
@@ -163,27 +162,33 @@
 		
 		 
 
-		 <!-- Equalizer	-->
+		<!-- Equalizer	-->
 		 <div class="Equalizer">
 		 
 			 
 			 <div> Volume
-                <input type="range" id="sourceHeightSlider" class="slider" min="0" max="100" value="10">
+                <input type="range" id="volumeslider" class="slider" min="0" max="100" value="10">
+				 <span id="volumeOutput" class="output">0 dB</span>
             </div>
 			<div> Gain
-                <input type="range" id="sourceHeightSlider" class="slider" min="0" max="100" value="0">
+                <input type="range" id="gainslider" class="slider" min="-50" max="50" value="0">
+				 <span id="gainOutput" class="output">0 dB</span>
             </div>
 			<div> Bass
-                <input type="range" id="sourceHeightSlider" class="slider" min="0" max="100" value="0">
+                <input type="range" id="bassslider" class="slider" min="0" max="100" value="0">
+				 <span id="bassOutput" class="output">0 ?</span>
             </div>
 			<div> Middle
-                <input type="range" id="sourceHeightSlider" class="slider" min="0" max="100" value="0">
+                <input type="range" id="middleslider" class="slider" min="0" max="100" value="0">
+				 <span id="middleOutput" class="output">0 ?</span>
             </div>
 			<div> Treble
-                <input type="range" id="sourceHeightSlider" class="slider" min="0" max="100" value="0">
+                <input type="range" id="trebleslider" class="slider" min="0" max="100" value="0">
+				 <span id="trebleOutput" class="output">0 ?</span>
             </div>
 			<div> Reverb
-                <input type="range" id="sourceHeightSlider" class="slider" min="0" max="100" value="0">
+                <input type="range" id="reverbslider" class="slider" min="0" max="100" value="0">
+				 <span id="reverbOutput" class="output">0 ?</span>
             </div>
 		 </div>
 			
