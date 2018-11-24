@@ -5,6 +5,26 @@ body {
 	
 }
 
+
+
+
+
+.MoveY {
+	width: 150px;
+	height: 150px;	
+	margin-right: 154px;
+	margin-left:154px;
+	
+	
+}
+.MoveX {
+	width: 150px;
+	height: 150px;	
+	
+	
+}
+
+
 /*Noisemaker*/
 .Noisemaker {
 	margin-right: 10px;
@@ -22,7 +42,7 @@ body {
 
 
 /*PlayButton*/
-.button {
+.playbtn {
 	float: both;
 	width: 180px;
 	height: 180px;
@@ -30,7 +50,7 @@ body {
 	margin-right: 800px;
 	margin-top: 30px;	
 	font-size:24px;
-	
+	background: "url (Pictures/play.png)";
 	
 }
 

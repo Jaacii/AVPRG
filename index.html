@@ -5,168 +5,74 @@
 	<link rel="stylesheet" type="text/css" href=stylesheet.css>
 	<meta charset= "utf-8">
 	
-	<!-- Evtl ist die doppelte resonance implimierung unnötig -->
+	<!--  -->
 	 
-	      <script src="https://cdn.jsdelivr.net/npm/resonance-audio/build/resonance-audio.min.js"></script>
+	      <script src="https://cdn.jsdelivr.net/npm/resonance-audio/build/resonance-audio.min.js"></script> <!-- google resonance audio -->
 
-    <script>
-						//Später Script in einzelne Dateien packen. Single responsibility prinzip
-	   var select = 1;
-	   
-		//---------- Resonance Audio
-
-        var x = 0.0;
-        var y = 0.0;
-        var z = 0.0;
-
-       
-        let audioContext = new AudioContext();
-
-        // first-order Ambisonic Resonance Audio scene 
-        let resonanceAudioScene = new ResonanceAudio(audioContext);
-
-        // Connect the scene’s binaural output to stereo out.
-        resonanceAudioScene.output.connect(audioContext.destination);
-
-		//Raum Größe und Material
-        let roomDimensions = {
-            width: 3.1,
-            height: 2.5,
-            depth: 3.4,
-        };
-
-       
-			let roomMaterials = {
-            
-            left: 'metal',
-            right: 'curtain-heavy',
-            front: 'curtain-heavy',
-            back: 'curtain-heavy',
-            // Room floor
-            down: 'grass',
-            // Room ceiling
-            up: 'grass',
-        };
-
-        
-        resonanceAudioScene.setRoomProperties(roomDimensions, roomMaterials);
-		
-		
-		//
-		var songs = ["Cat.wav","bird.wav","wind.wav"];
- 
-        let audioElement2 = document.createElement('audio');
-		
-        audioElement2.loop = true;
-        let audioElementSource2 = audioContext.createMediaElementSource(audioElement2);
-        let source2 = resonanceAudioScene.createSource();
-        audioElementSource2.connect(source2.input);
-        source2.setPosition(x,y,z);
-        
-
-
-
-	  //------------Audio Select
-		
-	 
-			function selectSong(value) {		
-					if (value == 0) {
-					select = 0;}
-					else if (value == 1) {
-					select = 1;}
-					else {
-					select = 2;}
-
-				
-			}
-   
-   //------------Play Button
-		var onOff = 0;
-		
-			function playOrPauseSong() {
-				
-				
-				
-				if (onOff == 0) {
-					audioElement2.src = songs[select];
-				
-					audioElement2.play();
-				
-					//Pic change
-					document.getElementById("playpic").src="pause.png";
-					onOff = 1;
-				}
-				else {
-					
-					audioElement2.pause();     			  
-					//Pic change
-					document.getElementById("playpic").src="play.png";
-					onOff = 0;
-				}
-			}
-
-			
-		
-
-    </script>
-	 
+		  
+		  
+		<script src="JS/resonanceAudio.js"></script> 
+		<script src="JS/audioSelect.js"></script> 
+		<script src="JS/play.js"></script> 
+		<script src="JS/moveAudioSource.js"></script> 
+	
 	   
 		 
 	
 	</head>
-	<!-- Page Elements	-->
+	
 		<body>
 		
 		<!-- Noisemaker	-->
 		<div>
 		<div>
-				<input class="Noisemaker" id="s0" onclick="selectSong(0)" type="button"></button> 
+				<input class="Noisemaker" id="s0" onclick="selectSong(0)" type="button" value="Cat"></button> 
 		</div>
 		 <div>
-				<input class="Noisemaker" id="s1"  onclick="selectSong(1)" type="button"></button> 
+				<input class="Noisemaker" id="s1"  onclick="selectSong(1)" type="button" value="Bird"></button> 
 		</div>
 		<div>
-				<input class="Noisemaker" id="s2" onclick="selectSong(2)" type="button"></button> 
+				<input class="Noisemaker" id="s2" onclick="selectSong(2)" type="button" value="Wind"></button> 
 		</div>
 		 </div>
 		 
 		 
 		 
+		 
 		  <!-- Playbutton	-->
-		 <input id="playbtn" type="button" onclick="playOrPauseSong()"  class="button"> <img id="playpic" src="Pictures/play.png"/> </input> 
+		 <input id="playbtn" type="button" onclick="playOrPauseSong()"  class="playbtn" value="play">  </input> 
 		 
 		 
-		 
-	
-
-
 		 
 
-		 
-		 
-		 
-		 <!-- Room for 3D Audio		-->
-		 <div class= "room">
-			<img src="volume.svg" id="sourceAIcon" hidden>  
-			<img src="person.svg" id="listenerIcon" hidden>
-				<canvas id="canvas"></canvas>
-		
-				<script src="audio3d.js"></script>
-				 <script src="https://cdn.jsdelivr.net/npm/resonance-audio/build/resonance-audio.min.js"></script>		<!-- google resonance audio sdk	-->
-				<script src="canvasControl.js"></script>
-		 </div>	
-		 
-		 
-		 <h1> Equalizer </h1>
-		 
-			
 		 
 		
+		 
+		 
+		 <!-- move AudioSource	-->
+		 
+		 
+		 <input id="up" type="button" onclick="move(0)"  class="MoveY" value="forward"> </input> 
+		 <div> 
+ 
+			<input id="left" type="button" onclick="move(1)"  class="MoveX" value="left"> </input>
+			<input id="central" type="button" onclick="move(2)"  class="MoveX" value="reset"> </input>
+			<input id="right" type="button" onclick="move(3)"  class="MoveX" value="right"> </input>
+		 </div>
+		 <input id="down" type="button" onclick="move(4)"  class="MoveY" value="backward"> </input>
+		 
+		 <!-- Evtl regler für Z achse?	-->
+		 
+		 
+		 
+		 
+		 
+		 
 		 
 
 		<!-- Equalizer	-->
 		 <div class="Equalizer">
-		 
+		  <h1> Equalizer </h1>
 			 
 			 <div> Volume
                 <input type="range" id="volumeslider" class="slider" min="0" max="100" value="10">
@@ -184,43 +90,12 @@
                 <input type="range" id="middleslider" class="slider" min="0" max="100" value="0">
 				 <span id="middleOutput" class="output">0 ?</span>
             </div>
-			<div> Treble
-                <input type="range" id="trebleslider" class="slider" min="0" max="100" value="0">
-				 <span id="trebleOutput" class="output">0 ?</span>
-            </div>
-			<div> Seek
-                <input type="range" id="seekslider" class="slider" min="0" max="100" value="0">
-				 <span id="reverbOutput" class="output">0 ?</span>
-            </div>
-			Reverb?
+			
+			
+			
 		 </div>
 			
-		<script>
-		var seekslider, volumeslider, seeking=false, seekto;
-	
-	
-		volumeslider = document.getElementById("volumeslider");
-		volumeslider.addEventListener("mousemove", setvolume);
-		seekslider = document.getElementById("seekslider");
-		seekslider.addEventListener("mousedown", function(event){ seeking=true; seek(event); });
-		seekslider.addEventListener("mousemove", function(event){ seek(event); });
-		seekslider.addEventListener("mouseup",function(){ seeking=false; });
-
-			
-		function seek(event){
-			if(seeking){
-				seekslider.value = event.clientX - seekslider.offsetLeft;
-				seekto = audioElement2.duration * (seekslider.value / 100);
-				audioElement2.currentTime = seekto;
-			}
-		}
-		function setvolume(){
-			audioElement2.volume = volumeslider.value / 100;
-		}
-
-
 		
-		</script>
 		 
 
 
