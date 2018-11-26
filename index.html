@@ -73,22 +73,25 @@
 		 <div class="Equalizer">
 		  <h1> Equalizer </h1>
 			 
-			 <div> Volume
-                <input type="range" id="volumeslider" class="slider" min="0" max="100" value="50">
-				 <span id="volumeOutput" class="output">0 dB</span>
+			 <div id="volumeContainer">Volume
+                <input type="range" min="0" max="100" value="50" class="slider" id="volumeslider">
+				
+                <span id="volumeOutput" class="output">50 db</span>
             </div>
-			<div> Gain
-                <input type="range" id="gainslider" class="slider" min="-50" max="50" value="0">
-				 <span id="gainOutput" class="output">0 dB</span>
+            <div id="gainContainer">Gain
+                <input type="range" min="-40" max="40" value="0" class="slider" id="gainslider">
+                <span id="gainOutput" class="output">0 dB</span>
             </div>
-			<div> Quality
-                <input type="range" id="qualityslider" class="slider" min="0" max="100" value="0">
-				 <span id="qualityOutput" class="output">0</span>
+            <div id="qualityContainer">Quality
+                <input type="range" min="0" max="100" value="0" class="slider" id="qualityslider">
+                <span id="qualityOutput" class="output">0</span>
             </div>
-			<div> Distortion
-                <input type="range" id="distortionslider" class="slider" min="0" max="100" value="0">
-				 <span id="distortionOutput" class="output">0</span>
-            </div>
+            
+			 
+			 <script src="JS/volume.js"></script> 
+			 
+			 
+			
 			
 			
 			
@@ -104,3 +107,6 @@
 		
 		
 </html>
+
+
+
