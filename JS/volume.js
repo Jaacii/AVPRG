@@ -24,6 +24,10 @@ function sliderchange() {
             filter.Q.value = this.value;
             document.getElementById("qualityOutput").innerHTML = this.value;
             break;
+		case "frequencyslider":
+            filter.frequency.value = this.value;
+            document.getElementById("frequencyOutput").innerHTML = this.value + " Hz";
+            break;
         
     }
 }
