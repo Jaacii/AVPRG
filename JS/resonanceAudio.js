@@ -26,14 +26,14 @@
        
 			let roomMaterials = {
             
-            left: 'metal',
+            left: 'curtain-heavy',
             right: 'curtain-heavy',
-            front: 'curtain-heavy',
-            back: 'curtain-heavy',
+            front: 'glass-thin',
+            back: 'glass-thin',
             // Room floor
             down: 'grass',
             // Room ceiling
-            up: 'grass',
+            up: 'transparent',
         };
 
         
@@ -48,6 +48,9 @@
         audioElement2.loop = true;
         let audioElementSource2 = audioContext.createMediaElementSource(audioElement2);
         let source2 = resonanceAudioScene.createSource();
+		
+		resonanceAudioScene.setListenerPosition(x, y, z);
+		resonanceAudioScene
         audioElementSource2.connect(source2.input);
         source2.setPosition(x,y,z);
         
