@@ -49,6 +49,7 @@
         let audioElementSource2 = audioContext.createMediaElementSource(audioElement2);
         let source2 = resonanceAudioScene.createSource();
 		
+		audioElement2.volume = volumeslider.value / 100;
 		resonanceAudioScene.setListenerPosition(x, y, z);
 		resonanceAudioScene
         audioElementSource2.connect(source2.input);
