@@ -5,7 +5,7 @@
 				
 				
 				
-				if (onOff === 0) {
+				if (onOff == 0) {
 					audioElement2.src = songs[select];
 				
 					audioElement2.play();
@@ -23,8 +23,3 @@
 					onOff = 0;
 				}
 			}
-
-			
-			
-			
-			
