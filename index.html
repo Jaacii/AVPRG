@@ -52,15 +52,16 @@
 		 <!-- move AudioSource	-->
 		 
 		 
-		 <input id="up" type="button" onclick="move(0)"  class="MoveY" value="forward"> </input> 
+		 <input id="up" type="button" onclick="moveSource(0)"  class="MoveY" value="forward"> </input> 
 		 <div> 
  
-			<input id="left" type="button" onclick="move(1)"  class="MoveX" value="left"> </input>
-			<input id="central" type="button" onclick="move(2)"  class="MoveX" value="reset"> </input>
-			<input id="right" type="button" onclick="move(3)"  class="MoveX" value="right"> </input>
+			<input id="left" type="button" onclick="moveSource(1)"  class="MoveX" value="left"> </input>
+			<input id="central" type="button" onclick="moveSource(2)"  class="MoveX" value="reset"> </input>
+			<input id="right" type="button" onclick="moveSource(3)"  class="MoveX" value="right"> </input>
 		 </div>
-		 <input id="down" type="button" onclick="move(4)"  class="MoveY" value="backward"> </input>
-		 
+		<div><input id="down" type="button" onclick="moveSource(4)"  class="MoveY" value="backward"> </input>
+		  X: <span id="Xcoordinate" class="Xloc">0</span>   
+		  Y: <span id="Ycoordinate" class="YLoc">0</span>   </div> </br>
 		 <!-- Evtl regler für Z achse?	-->
 		 
 		 
