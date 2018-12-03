@@ -9,8 +9,5 @@
 					select = 1;}
 					else {
 					select = 2;}
-				if (onOff === 1) {
-					audioElement2.play();    
-				}
 				
 			}
