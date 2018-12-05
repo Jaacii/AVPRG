@@ -1,5 +1,5 @@
 					
-	   var select = 1;
+	   var select = 3;
 	   
 		//---------- Resonance Audio
 
@@ -41,7 +41,7 @@
 		
 		
 		//
-		var songs = ["Audio/Cat.wav","Audio/bird.wav","Audio/wind.wav"];
+		var songs = ["Audio/Cat.wav","Audio/bird.wav","Audio/wind.wav", "Audio/footsteps.wav"];
  
         let audioElement2 = document.createElement('audio');
 		
