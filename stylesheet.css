@@ -164,17 +164,20 @@ body {
 }
 /*------------------------*/
 /* MP3 Player*/
-#thefile {
+#fileload {
   position: fixed;
   top: 35px;
-  left: 10px;
+  left: 15px;
   z-index: 100;
+  width: 20%;
+  
+  background-color: #A4B3B6;
 }
 
 #canvas {
   position: fixed;
-  left: 0;
   top: 30;
+  left: 0;
   width: 100%;
   height: 100%;
 }
