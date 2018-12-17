@@ -1,4 +1,4 @@
-<script>
+
 window.onload = function() {
   
   var file = document.getElementById("thefile");
@@ -63,4 +63,3 @@ window.onload = function() {
     renderFrame();
   };
 };
-</script>
