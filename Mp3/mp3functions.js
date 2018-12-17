@@ -9,17 +9,17 @@ window.onload = function() {
     audio.src = URL.createObjectURL(files[0]);
     audio.load();
     audio.play();
-    var context = new AudioContext();
-    var src = context.createMediaElementSource(audio);
-    var analyser = context.createAnalyser();
+    var audioContext = new AudioContext();
+    var audioElementSource2 = audioContext.createMediaElementSource(audio);
+    var analyser = audioContext.createAnalyser();
 
     var canvas = document.getElementById("canvas");
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
     var ctx = canvas.getContext("2d");
 
-    src.connect(analyser);
-    analyser.connect(context.destination);
+    audioElementSource2.connect(analyser);
+    analyser.connect(audioContext.destination);
 
     analyser.fftSize = 256;
 
