@@ -47,17 +47,49 @@ body {
 
 /*PlayButton*/
 .playbtn {
-	float: both;
+	
+
+	/*float: both;*/
+	left: 50;
+	top: 50;
 	width: 10%;
 	height: 180px;
-	margin-left: 155px;  /*Die Anordnung zur Mitte geht auch anders und genauer. Sollte später noichmal geändert werden*/
+	margin-left: 155px;  
 	margin-right: 1500px;
 	margin-top: 30px;
 		
-	font-size:24px;
-	/*background: "url (Pictures/play.png)";*/
-	background-color: #A4B3B6;
+	border: none;
+
 	
+	
+	
+}
+#playbtn {
+	background: url("Pictures/play.png") no-repeat scroll 0 0 transparent;
+}
+#pausebtn {
+	background: url("Pictures/pause.png") no-repeat scroll 0 0 transparent;
+	display:none;
+}
+#up {
+	background: url("Pictures/up.png") no-repeat scroll 0 0 transparent;
+	background-color: #A4B3B6 
+}
+#left {
+	background: url("Pictures/left.png") no-repeat scroll 0 0 transparent;
+	background-color: #A4B3B6 
+}
+#right {
+	background: url("Pictures/right.png") no-repeat scroll 0 0 transparent;
+	background-color: #A4B3B6 
+}
+#down {
+	background: url("Pictures/down.png") no-repeat scroll 0 0 transparent;
+	background-color: #A4B3B6 ;  
+}
+#central {
+	background: url("Pictures/reset.png") no-repeat scroll 0 0 transparent;
+	background-color: #A4B3B6 
 }
 
 #CoordinatesAndPlay{
@@ -83,7 +115,7 @@ body {
 	height: 460px;
 	float: left;
 	padding:10px;
-	background-color: #A67FFF  ;
+	
 	overflow: hidden; 
 	margin-left: 30px;
 	padding: 20px;
@@ -96,14 +128,14 @@ body {
 	
 	margin-left:174px; 
 	margin-right: 10px;
-	background-color: #A4B3B6;
+	
 	display:  inline-block;	
 	
 }
 .MoveX {
 	width: 150px;
 	height: 150px;	
-	background-color: #A4B3B6;
+	
 	display:  inline-block;	
 	margin-left: 10px;
 	margin-top: 10px;

@@ -1,7 +1,7 @@
  //------------Play Button
 		var onOff = 0;
 		
-			function playOrPauseSong() {
+			function playOrPauseSong(playPause) {
 				
 				
 				
@@ -9,17 +9,16 @@
 					audioElement2.src = songs[select];
 				
 					audioElement2.play();
-					//audioElement2.volume = volumeslider.value / 100;
-					//Pic change
-					//document.getElementById("playpic").src="pause.png";
+					document.getElementById('pausebtn').style.display="inline-block";
+					document.getElementById('playbtn').style.display="none";
+					
 					onOff = 1;
 				}
 				else {
 					
 					audioElement2.pause(); 
-					//audioElement2.volume = 0;		//schummeltaktik, weil es manchmal die audio nicht pausiert
-					//Pic change
-					//document.getElementById("playpic").src="play.png";
+					document.getElementById('playbtn').style.display="inline-block";
+					document.getElementById('pausebtn').style.display="none";
 					onOff = 0;
 				}
 			}
