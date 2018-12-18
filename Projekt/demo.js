@@ -158,11 +158,11 @@
 		if (demoMuted) {
 			value = 1.0
 			demoMuted = false
-			setStatus("Play") 
+			setStatus("Pause") 
 		} else {
 			value = 0.0
 			demoMuted = true
-			setStatus("Stop")
+			setStatus("Play")
 		}
 
 		var time = audioContext.currentTime

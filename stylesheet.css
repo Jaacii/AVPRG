@@ -188,3 +188,15 @@ audio {
   bottom: 10px;
   width: calc(100% - 20px);
 }
+
+
+
+/*------*/
+#canvasa {
+	position: fixed;
+  top: 50;
+  left: 100;
+  width: 30%;
+  height: 30%;
+ background-color: #A4B3B6;
+}

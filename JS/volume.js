@@ -16,19 +16,7 @@ function sliderchange() {
             audioElement2.volume = this.value / 100;
             document.getElementById("volumeOutput").innerHTML = this.value + " dB";
             break;
-        case "gainslider":
-             filter.gain.value = this.value;
-            document.getElementById("gainOutput").innerHTML = this.value + " dB";
-            break;
-        case "qualityslider":
-            filter.Q.value = this.value;
-            document.getElementById("qualityOutput").innerHTML = this.value;
-            break;
-		case "frequencyslider":
-            filter.frequency.value = this.value;
-            document.getElementById("frequencyOutput").innerHTML = this.value + " Hz";
-            break;
-        
+
     }
 }
 

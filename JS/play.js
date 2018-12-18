@@ -23,3 +23,13 @@
 					onOff = 0;
 				}
 			}
+
+			
+			//------------Audio Select
+		
+	 
+			function selectSong(value) {		
+					select = value;
+
+				
+}
