@@ -1,9 +1,5 @@
-Design der Seite    (Farben, anordnung)
-Volumeslider geht nicht mehr ?
-Andere Slider?
-3D Audio
-Playbtn ein Image geben dass sich beim drücken verändert
-
-
+Kombinieren der 3 Seiten
+webdesign bei 3d audio
+slider
 
 

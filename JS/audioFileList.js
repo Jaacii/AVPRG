@@ -10,7 +10,11 @@ var songs = [
 "Audio/frogs.wav",			//7
 "Audio/watersplash.wav",	//8
 "Audio/shipbell.wav", 		//9
-"Audio/crow.wav"			//10
+"Audio/crow.wav",			//10
 
 
+"Mp3/ExampleSongs/ItalianMusic.mp3" , //11
+"Mp3/ExampleSongs/FUSE.mp3" , //12
+"Mp3/ExampleSongs/Mortals.mp3",  //13
+"Mp3/ExampleSongs/Violine.mp3"  //14
 ];

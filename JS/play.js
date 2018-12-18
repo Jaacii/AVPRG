@@ -1,7 +1,9 @@
  //------------Play Button
 		var onOff = 0;
 		
-			function playOrPauseSong(playPause) {
+		
+			
+			function playOrPauseSong() {
 				
 				
 				
@@ -14,6 +16,7 @@
 					
 					onOff = 1;
 				}
+			
 				else {
 					
 					audioElement2.pause(); 
