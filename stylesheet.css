@@ -29,8 +29,8 @@ body {
 	
 	border: 3px gray68;
 	float: left;
-	width: 160px;
-	height: 115px;				/*höhe */
+	width: 120px;
+	height: 95px;				/*höhe */
 	margin-top: 18px;
 	
 	margin-left: 5px;	
@@ -42,7 +42,7 @@ body {
 }
 
 .songarea {
-	margin-left: 1600px;
+	margin-left: 1400px;
 	
 	margin-right: 10px;
 	margin-bottom: 10px;
@@ -242,12 +242,24 @@ audio {
 
 
 
-/*------*/
-#canvasa {
-	position: fixed;
-  top: 50;
-  left: 100;
-  width: 30%;
-  height: 30%;
- background-color: #A4B3B6;
+
+/*3D-Test*/
+#canvas2 {
+	position: absolute;
+	top: 200px;
+	left: 400px;
+	background-color: #135056;
+	background-image: url("Projekt/background1.png")
+	
+	
 }
+
+#status {
+	left: 420px;
+	
+	padding: 10px;
+	position: absolute;
+	color: #000000;
+	background-color: #FFFFFF;
+}
+/*------*/
